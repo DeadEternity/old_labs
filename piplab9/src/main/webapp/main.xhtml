@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Лабораторная работа №9</title>
+    <link rel="stylesheet" type="text/css" href="resources/styles/style.css"/>
+    <script type="text/javascript" src="resources/js/click.js"/>
+    <h:outputScript name="check.js" />
+</h:head>
+<h:body>
+    <h:graphicImage id="anim" class="win" value="resources/pictures/anim/00000.png" />
+        <br/>
+        <table>
+            <tr>
+                <td class="kamaface"></td>
+                <td colspan="2">
+                    <header>
+                        <h1>Area check</h1>
+                    </header>
+                </td>
+            </tr>
+            <tr>
+                <td class="kamaface"></td>
+                <td colspan="2">
+                    <div id="graph_wrap">
+                        <!--<div id="graph_points">
+                            <canvas id="graph_points_canvas" width="221px" height="221px"/>
+                        </div>
+                        <h:commandButton id="image" class="graph" image="resources/pictures/areas.png" onclick="addPoint(event)"/>-->
+                        <p:graphicImage id="image" onclick="addPoint(event)" value="#{areaCheck.image}" alt="BAD IMAGE!!1" cache="FALSE"/>
+                        <!--url="resources/pictures/areas.png"-->
+                    </div>
+                </td>
+            </tr>
+            <h:form id="mainForm">
+            <tr>
+                <td class="kamaface"></td>
+                <td>X:</td>
+                <td>
+                    <h:selectBooleanCheckbox value="#{areaCheck.x1}" id="cb1"/>
+                    <h:outputLabel value="-3" for="cb1"/>
+                    <h:selectBooleanCheckbox value="#{areaCheck.x2}" id="cb2"/>
+                    <h:outputLabel value="-2" for="cb2"/>
+                    <h:selectBooleanCheckbox value="#{areaCheck.x3}" id="cb3"/>
+                    <h:outputLabel value="-1" for="cb3"/>
+                    <h:selectBooleanCheckbox value="#{areaCheck.x4}" id="cb4"/>
+                    <h:outputLabel value="0" for="cb4"/>
+                    <h:selectBooleanCheckbox value="#{areaCheck.x5}" id="cb5"/>
+                    <h:outputLabel value="1" for="cb5"/>
+                    <h:selectBooleanCheckbox value="#{areaCheck.x6}" id="cb6"/>
+                    <h:outputLabel value="2" for="cb6"/>
+                    <h:selectBooleanCheckbox value="#{areaCheck.x7}" id="cb7"/>
+                    <h:outputLabel value="3" for="cb7"/>
+                    <h:inputHidden id="x" value="#{areaCheck.hiddenX}"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="kamaface"></td>
+                <td>Y:
+                    <h:message for="y" style="color:red" />
+                </td>
+                <td>
+                    <h:inputText id="y" required="true" value="#{areaCheck.y}" maxlength="8">
+                        <f:validator validatorId="yValidator"/>
+                    </h:inputText>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="kamaface"></td>
+                <td>R:</td>
+                <td>
+                    <h:selectOneMenu id="sm" value="#{areaCheck.r}" required="true" requiredMessage="Выбери игрушку дьявола">
+                        <!--<f:selectItem itemLabel="Выбрать игрушку дьявола" />-->
+                        <f:selectItem itemValue="1" itemLabel="1" />
+                        <f:selectItem itemValue="1.5" itemLabel="1.5" />
+                        <f:selectItem itemValue="2" itemLabel="2" />
+                        <f:selectItem itemValue="2.5" itemLabel="2.5" />
+                        <f:selectItem itemValue="3" itemLabel="3" />
+                    </h:selectOneMenu>
+                </td>
+            </tr>
+            <tr>
+                <td class="kamaface"></td>
+                <td>Submit</td>
+                <td>
+                    <h:commandButton class="mainButton" id="submit" action="#{areaCheck.addPunto}" value="Всё, небольшой расход" />
+                </td>
+            </tr>
+            <tr>
+                <td class="kamaface"></td>
+                <td>Clear</td>
+                <td>
+                    <h:commandButton action="#{areaCheck.clear}" value="Clear" />
+                </td>
+            </tr>
+            </h:form>
+            <h:form>
+            <tr>
+                <td class="kamaface"></td>
+                <td>Welcome page</td>
+                <td>
+                    <h:commandButton action="welcomePage" value="Один из нас пострадает" />
+                </td>
+            </tr>
+            </h:form>
+            <tr>
+                <td class="kamaface"></td>
+                <td colspan="2">
+                    <h:dataTable class="notface" value="#{areaCheck.puntoList}" var="p">
+                        <h:column>
+                            <f:facet name="header">X</f:facet>
+                            #{p.x}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Y</f:facet>
+                            #{p.y}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">R</f:facet>
+                            #{p.r}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Result</f:facet>
+                            #{p.isHit}
+                        </h:column>
+                    </h:dataTable>
+                </td>
+            </tr>
+        </table>
+</h:body>
+
+</html>

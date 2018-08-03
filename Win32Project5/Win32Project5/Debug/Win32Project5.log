@@ -1,0 +1,8 @@
+﻿  Source.cpp
+c:\users\1\documents\visual studio 2015\projects\win32project5\win32project5\source.cpp(110): warning C4018: '<': signed/unsigned mismatch
+c:\users\1\documents\visual studio 2015\projects\win32project5\win32project5\source.cpp(117): warning C4018: '<': signed/unsigned mismatch
+c:\users\1\documents\visual studio 2015\projects\win32project5\win32project5\source.cpp(178): warning C4018: '<': signed/unsigned mismatch
+c:\users\1\documents\visual studio 2015\projects\win32project5\win32project5\source.cpp(438): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+c:\users\1\documents\visual studio 2015\projects\win32project5\win32project5\source.cpp(443): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+  Win32Project5.vcxproj -> C:\Users\1\documents\visual studio 2015\Projects\Win32Project5\Debug\Win32Project5.exe
+  Win32Project5.vcxproj -> C:\Users\1\documents\visual studio 2015\Projects\Win32Project5\Debug\Win32Project5.pdb (Full PDB)

@@ -1,0 +1,36 @@
+body {
+  font-family: "Courier New";
+  background-image: url("../pictures/kama.jpg");
+}
+
+.kamaface {
+    width: 62%;
+}
+.win {
+    position: absolute;
+}
+
+td:not(.kamaface) {
+    width: 30%;
+    background-color: gray;
+}
+
+.notface {
+    background-color: gray;
+}
+
+table {
+    border: 0px solid red;
+}
+
+h1 {
+  font-size: medium;
+  text-align: left;
+  font-weight: lighter;
+  font-family: Century;
+  color: hsl(240,100%,25%);
+}
+
+TR TD{
+    text-align: center;
+}

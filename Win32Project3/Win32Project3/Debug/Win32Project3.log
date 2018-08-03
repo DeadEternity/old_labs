@@ -1,0 +1,6 @@
+﻿  Win32Project3.cpp
+c:\users\1\documents\visual studio 2015\projects\win32project3\win32project3\win32project3.cpp(49): warning C4302: 'type cast': truncation from 'LPWSTR' to 'WORD'
+c:\users\1\documents\visual studio 2015\projects\win32project3\win32project3\win32project3.cpp(54): warning C4302: 'type cast': truncation from 'LPWSTR' to 'WORD'
+c:\users\1\documents\visual studio 2015\projects\win32project3\win32project3\win32project3.cpp(29): warning C4101: 'prc': unreferenced local variable
+  Win32Project3.vcxproj -> C:\Users\1\documents\visual studio 2015\Projects\Win32Project3\Debug\Win32Project3.exe
+  Win32Project3.vcxproj -> C:\Users\1\documents\visual studio 2015\Projects\Win32Project3\Debug\Win32Project3.pdb (Full PDB)

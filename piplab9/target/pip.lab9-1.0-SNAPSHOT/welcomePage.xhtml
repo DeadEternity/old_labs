@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Лабораторная работа №9</title>
+        <link rel="stylesheet" type="text/css" href="resources/styles/style.css"/>
+    </h:head>
+    <h:body>
+        <table>
+            <tr>
+                <td class="kamaface"></td>
+                <td height="20%"></td>
+            </tr>
+            <tr>
+                <td class="kamaface">
+                </td>
+                <td class="notface">
+                    <header>
+                        <h1>Лабораторная работа №9
+                            <br/>Выполнил студент гр. P3210:<br/>Шубкин Р.Э.<br/>Вариант 1031
+                        </h1>
+                    </header>
+                </td>
+            </tr>
+            <tr>
+                <td class="kamaface">
+                </td>
+                <td class="notface">
+                    <h1>
+                        <h:form id="timeForm">
+                            <h:outputText id="dateOut" value="#{welcomePageBean.dateString}" />
+                            <p:poll interval="8" listener="#{welcomePageBean.refreshDate}" update="dateOut" />
+                        </h:form>
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td class="kamaface" width="70%">
+                </td>
+                <td class="notface">
+                    <h:form>
+                        <h:commandButton class="mainButton" id="submit" action="main" value="Припарковаться, ежжи" />
+                    </h:form>
+                </td>
+            </tr>
+        </table>
+    </h:body>
+
+</h:html>
